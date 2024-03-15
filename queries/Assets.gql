@@ -1,0 +1,27 @@
+query Assets($per_page: Int) {
+  assets(first: $per_page) {
+    id
+    handle
+    fileName
+    grid: url(
+      transformation: {
+        image: {
+          resize: { width: 300, height: 300, fit: crop }
+          compress: { metadata: true }
+          quality: { value: 90 }
+        }
+        document: { output: { format: autoImage } }
+      }
+    )
+    publishedAt
+    height
+    width
+    mimeType
+    size
+    alt
+    createdBy {
+      name
+      picture
+    }
+  }
+}
