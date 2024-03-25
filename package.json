@@ -10,7 +10,7 @@
     "postinstall": "nuxt prepare"
   },
   "dependencies": {
-    "nuxt": "^3.10.3",
+    "nuxt": "^3.11.1",
     "nuxt-graphql-client": "^0.2.33",
     "pretty-bytes": "^6.1.1",
     "vue": "^3.4.21",

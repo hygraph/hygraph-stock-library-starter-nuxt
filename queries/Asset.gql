@@ -3,12 +3,7 @@ query Asset($id: ID!) {
     id
     handle
     fileName
-    original: url(
-      transformation: {
-        image: { compress: { metadata: true } }
-        document: { output: { format: autoImage } }
-      }
-    )
+    original: url
     hero: url(
       transformation: {
         image: {
